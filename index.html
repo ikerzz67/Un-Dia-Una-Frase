@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f3ef"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Una frase">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"><title>Un día, una frase</title>
+</head>
+<body><main class="app">
+<header><div><span class="eyebrow">TU RECORDATORIO DIARIO</span><h1>Un día, una frase.</h1></div><span id="date" class="date"></span></header>
+<section class="quote-card"><div class="mark">“</div><p id="quote" class="quote"></p><div class="bottom"><span id="category"></span><span id="count"></span></div></section>
+<nav class="actions"><button id="favorite" class="secondary">♡ Guardar</button><button id="more" class="primary">Otra frase <span>↗</span></button></nav>
+<section class="below"><div class="section-title"><h2>Frases favoritas</h2><span id="fav-count">0 guardadas</span></div><div id="favorites" class="favorites"></div><p class="hint">Un pequeño recordatorio para avanzar cada día. Añade el widget de Scriptable a tu pantalla de inicio para leer la frase sin abrir la app.</p></section>
+</main><script src="quotes.js"></script><script src="app.js"></script></body></html>

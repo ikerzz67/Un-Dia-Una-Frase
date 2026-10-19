@@ -1,0 +1,43 @@
+UN DÍA, UNA FRASE — app + widget para iPhone
+
+QUÉ INCLUYE
+- App web minimalista: frase diaria, categoría, botón para explorar otras frases y favoritas.
+- Widget de Scriptable con el mismo calendario de frases que la app.
+- Guía para publicar gratis en GitHub Pages y configurar el aviso de las 07:00.
+
+PARTE 1 — PUBLICAR LA APP GRATIS EN GITHUB PAGES
+1. Entra en https://github.com e inicia sesión.
+2. Pulsa + > New repository.
+3. Nombre: Un-Dia-Una-Frase. Selecciona Public y crea el repositorio.
+4. Entra en el repositorio > Add file > Upload files.
+5. Sube estos archivos: index.html, style.css, quotes.js, app.js y manifest.json. Pulsa Commit changes.
+6. Ve a Settings > Pages.
+7. En Build and deployment selecciona Deploy from a branch, branch main y carpeta / (root). Guarda.
+8. Espera unos minutos. La dirección será https://TU-USUARIO.github.io/Un-Dia-Una-Frase/ (cambia TU-USUARIO por tu usuario real de GitHub).
+9. En el iPhone abre esa dirección con Safari > Compartir > Añadir a pantalla de inicio.
+
+PARTE 2 — CREAR EL WIDGET REAL
+1. Instala Scriptable desde el App Store. La app se puede usar gratis; no necesitas compras opcionales.
+2. En este ZIP abre widget-scriptable.js y copia todo el código.
+3. Abre Scriptable > + > pega el código > pulsa el nombre del script y guárdalo como Una frase.
+4. En la pantalla de inicio del iPhone mantén pulsado un espacio vacío hasta que los iconos se muevan.
+5. Pulsa +, busca Scriptable y añade el widget de tamaño mediano (el cuadrado grande puede variar según versión de iOS).
+6. Mantén pulsado el widget > Editar widget > Script > selecciona Una frase.
+7. Si no ves la frase correcta al momento, toca el widget o abre Scriptable y ejecuta el script; iOS decide cuándo refresca automáticamente los widgets.
+8. En el script, la URL al tocar el widget apunta inicialmente a Scriptable. Cuando tengas publicada la app, cambia la línea `w.url = "https://www.scriptable.app/";` por la URL real de tu GitHub Pages y vuelve a guardar.
+
+PARTE 3 — RECORDATORIO DIARIO A LAS 07:00
+No puedo activar una automatización directamente desde aquí, pero puedes hacerlo en el iPhone:
+1. Abre Atajos > Automatización > + > Hora del día.
+2. Pon 07:00 y selecciona Diariamente.
+3. Selecciona Ejecutar inmediatamente (si aparece esa opción).
+4. Añade la acción Mostrar notificación y escribe: “Tu frase de hoy te espera en el widget. Empieza el día con intención.”
+5. Guarda la automatización.
+
+IMPORTANTE SOBRE LA NOTIFICACIÓN
+Esta configuración muestra un recordatorio fijo a las 07:00, no inserta automáticamente el texto variable de la frase. El widget enseña la frase diaria. iOS controla el momento exacto de actualización del widget, por lo que no se puede garantizar una actualización exacta a las 07:00. La app web no necesita notificaciones para mostrar la frase.
+
+DETALLES
+- Las frases cambian según la fecha y coinciden entre la app y el widget.
+- Las favoritas de la app se guardan localmente en el navegador de ese dispositivo; no se sincronizan con otros dispositivos.
+- El diseño usa tonos crema, blanco, negro y gris, con tipografía limpia y grande.
